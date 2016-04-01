@@ -1,2 +1,2 @@
 # deckbuilder
-sw deck buidler
+sw deck builder
