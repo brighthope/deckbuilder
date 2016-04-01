@@ -1,0 +1,94 @@
+@import '../../../dojo/resources/dojo.css';
+@import '../../../dijit/themes/claro/claro.css';
+@import '../../../dgrid/css/dgrid.css';
+
+/*http://tympanus.net/codrops/2011/12/08/25-examples-of-perfect-color-combinations-in-web-design/*/
+/* colors
+    red: #D43F3F;
+    blue: #00ACE9;
+    green: #6A9A1F;
+    dark-grey: #404040;
+    white: #F6F6E8;
+*/
+html,
+body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+.loading {
+    font-size:1.5em;
+    text-align:center;
+}
+
+.loaded .loading {
+    display:none
+}
+
+.sw-app-container {
+    background-color: #404040;
+}
+
+.sw-app-header {
+    background-color: #F6F6E8;
+    color: #404040;
+}
+
+.sw-app-search {
+    width: 400px;
+    color: #F6F6E8;
+}
+
+.sw-app-search label {
+    color: #F6F6E8;
+}
+
+.body-content {
+    width: 100%;
+    height: 100%;
+}
+
+.body-content:after {
+  display:block;
+  content:"";
+  clear:both;
+}
+
+.card-panel {
+    width: 360px;
+    float: left;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.card-panel img {
+    width: 340px;
+}
+
+.deck-panel {
+    margin-left: 360px;
+    height: 100%;
+}
+
+.dbootstrap .sw-app-body .dgrid.card-grid {
+    height: 100%;
+}
+
+.dbootstrap .dgrid.card-grid,
+.dbootstrap .dgrid.card-grid .dgrid-row-even{
+    background-color: #F6F6E8;
+    color: #404040;
+}
+
+.dbootstrap .dgrid.card-grid .dgrid-no-data {
+    padding: 15px;
+}
+
+.dgrid.card-grid .dgrid-column-side,
+.dgrid.card-grid .dgrid-column-add,
+.dgrid.card-grid .dgrid-column-remove {
+    width: 50px;
+    text-align: center;
+}

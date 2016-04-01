@@ -1,0 +1,24 @@
+{
+  "name": "sw client",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dijit": "~1.10.4",
+    "dojo": "~1.10.4",
+    "util": "dojo-util#~1.10.4",
+    "dgrid": "~1.0.0",
+    "dstore": "~1.1.1",
+    "davewilton-dbootstrap": "*",
+    "xstyle": "^0.3.1",
+    "font-awesome": "^4.5.0",
+    "jspdf": "^1.1.135",
+    "bootstrap": "^3.3.6"
+  }
+}

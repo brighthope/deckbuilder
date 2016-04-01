@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SW deck builder</title>
+  <!-- Application-specific CSS should be stored in your application’s package to ensure portability and to allow
+       the build system to combine & minify it. -->
+  <!--<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="app/resources/css/app.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <script src="./jspdf/dist/jspdf.debug.js"></script>
+</head>
+<body class="dbootstrap">
+<!-- It's important to get something displayed to users as quickly as possible; here, we show a very basic loading
+     screen, which becomes hidden once the application loads -->
+<div class="loading">Loading…</div>
+<div id="appLayout"></div>
+
+<script src="dojoConfig.js"></script>
+<script src="dojo/dojo.js"></script>
+<!-- Load the application. Note that this module ID is hard-coded in build.sh in order to provide
+     an optimised build that loads as few as one script for the entire application. If you change the name or
+     location of this module, you will need to update build.sh too. -->
+<script>require(['app/main' ]);</script>
+</body>
+</html>

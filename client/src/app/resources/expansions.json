@@ -1,0 +1,116 @@
+[
+  {
+    "expansion": "anewhope",
+    "label": "A New Hope",
+    "icon": "anewhope"
+  }, {
+    "expansion": "cloudcity",
+    "label": "Cloud City",
+    "icon": "cloudcity"
+  }, {
+    "expansion": "coruscant",
+    "label": "Coruscant",
+    "icon": "coruscant"
+  }, {
+    "expansion": "dagobah",
+    "label": "Dagobah",
+    "icon": "dagobah"
+  }, {
+    "expansion": "deathstarII",
+    "label": "Death Star II",
+    "icon": "deathstarII"
+  }, {
+    "expansion": "endor",
+    "label": "Endor",
+    "icon": "endor"
+  }, {
+    "expansion": "enhancedcloudcity",
+    "label": "Enhanced Cloud City",
+    "icon": "premium"
+  }, {
+    "expansion": "enhancedjabbaspalace",
+    "label": "Enhanced Jabba's Palace",
+    "icon": "premium"
+  }, {
+    "expansion": "enhancedpremierepack",
+    "label": "Enhanced Premiere Pack",
+    "icon": "premium"
+  }, {
+    "expansion": "hoth",
+    "label": "Hoth",
+    "icon": "hoth"
+  }, {
+    "expansion": "hoth2player",
+    "label": "Hoth 2 Player",
+    "icon": "premium"
+  }, {
+    "expansion": "jabbaspalace",
+    "label": "Jabba's Palace",
+    "icon": "jabbaspalace"
+  }, {
+    "expansion": "jabbaspalacesealeddeck",
+    "label": "Jabba's Palace Sealed Deck",
+    "icon": "premium"
+  }, {
+    "expansion": "jedipack",
+     "label": "Jedi Pack",
+    "icon": "premium"
+  }, {
+    "expansion": "officialtournamentsealeddeck",
+    "label": "Official Tournament Sealed Deck",
+    "icon": "premium"
+  }, {
+    "expansion": "premiere",
+    "label": "Premiere",
+    "icon": ""
+  }, {
+    "expansion": "premiere2player",
+    "label": "Premiere 2 Player",
+    "icon": "premium"
+  }, {
+    "expansion": "rebelleadercards",
+    "label": "Rebel Leader Cards",
+    "icon": "premium"
+  }, {
+    "expansion": "reflectionsII",
+    "label": "Reflections II",
+    "icon": "reflectionsII"
+  }, {
+    "expansion": "reflectionsIII",
+    "label": "Reflections III",
+    "icon": "reflectionsIII"
+  }, {
+    "expansion": "specialedition",
+    "label": "Special Edition",
+    "icon": "specialedition"
+  }, {
+    "expansion": "tatooine",
+    "label": "Tatooine",
+    "icon": "tatooine"
+  }, {
+    "expansion": "theedpalace",
+    "label": "Theed Palace",
+    "icon": "theedpalace"
+  }, {
+    "expansion": "thirdanthology",
+    "label": "Third Anthology",
+    "icon": "premium"
+  }, {
+    "expansion": "virtualset0",
+    "label": "Virtual Set 0",
+    "icon": "virtualset0"
+  }, {
+    "expansion": "virtualset1",
+    "label": "Virtual Set 1",
+    "icon": "virtualset1"
+  }, {
+    "expansion": "virtualset2",
+    "label": "Virtual Set 2",
+    "icon": "virtualset2"
+  }, {
+    "expansion": "virtualset3",
+    "label": "Virtual Set 3",
+    "icon": "virtualset3"
+  }
+]
+

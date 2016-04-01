@@ -1,0 +1,51 @@
+[
+  {
+    "category": "admiralsorder",
+    "label": "Admiral's Order"
+  },  {
+    "id": "character",
+    "label": "Character"
+  }, {
+    "category": "creature",
+    "label": "Creature"
+  } , {
+    "category": "defensiveshield",
+    "label": "Defensive Shield"
+  }, {
+    "category": "device",
+    "label": "Device"
+  }, {
+    "category": "effect",
+    "label": "Effect"
+  }, {
+    "category": "epicevent",
+    "label": "Epic Event"
+  }, {
+    "category": "interrupt",
+    "label": "Interrupt"
+  }, {
+    "category": "jeditest",
+    "label": "Jedi Test"
+  }, {
+    "category": "location",
+    "label": "Location"
+  }, {
+    "category": "objective",
+    "label": "Objective"
+  }, {
+    "category": "podracer",
+    "label": "Podracer"
+  }, {
+    "category": "starship",
+    "label": "Starship"
+  }, {
+    "category": "vehicle",
+    "label": "Vehicle"
+  }, {
+    "category": "weapon",
+    "label": "Weapon"
+  }, {
+    "category": "gameaid",
+    "label": "Game Aid"
+  }
+]

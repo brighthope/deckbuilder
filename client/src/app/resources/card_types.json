@@ -1,0 +1,72 @@
+[
+  {
+    "type": "admiralsorder",
+    "label": "Admiral's Order"
+  },  {
+    "type": "character-alien",
+    "label": "Character - Alien"
+  },  {
+    "type": "character-darkjedimaster",
+    "label": "Character - Dark Jedi Master"
+  },  {
+    "type": "character-droid",
+    "label": "Character - Droid"
+  },  {
+    "type": "character-imperial",
+    "label": "Character - Imperial"
+  },  {
+    "type": "character-jedimaster",
+    "label": "Character Jedi Master"
+  },  {
+    "type": "character-rebel",
+    "label": "Character - Rebel"
+  },  {
+    "type": "character-republic",
+    "label": "Character - Republic"
+  },  {
+    "type": "character-sith",
+    "label": "Character - Sith"
+  }, {
+    "type": "creature",
+    "label": "Creature"
+  } , {
+    "type": "defensiveshield",
+    "label": "Defensive Shield"
+  }, {
+    "type": "device",
+    "label": "Device"
+  }, {
+    "type": "effect",
+    "label": "Effect"
+  }, {
+    "type": "epicevent",
+    "label": "Epic Event"
+  }, {
+    "type": "interrupt",
+    "label": "Interrupt"
+  }, {
+    "type": "jeditest",
+    "label": "Jedi Test"
+  }, {
+    "type": "location",
+    "label": "Location"
+  }, {
+    "type": "objective",
+    "label": "Objective"
+  }, {
+    "type": "podracer",
+    "label": "Podracer"
+  }, {
+    "type": "starship",
+    "label": "Starship"
+  }, {
+    "type": "vehicle",
+    "label": "Vehicle"
+  }, {
+    "type": "weapon",
+    "label": "Weapon"
+  }, {
+    "type": "gameaid",
+    "label": "Game Aid"
+  }
+]

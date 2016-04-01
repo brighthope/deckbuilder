@@ -1,0 +1,26 @@
+<div data-dojo-attach-point="containerNode">
+  <label for="${id}-name">Select a card:</label>
+  <select data-dojo-attach-point="nameFilter" id="${id}-name"></select>
+  <a href="#" data-dojo-attach-event="onclick: _addNameCard"><i class="fa fa-plus-circle"></i> add to deck</a>
+  <hr>
+  <h4>Search for cards:</h4>
+  <label>Side:</label><br>
+  LS <i class="fa fa-rebel"></i> : <input type="radio" name="side" value="light" data-dojo-attach-event="onchange: _sideInputChanged" />
+  DS <i class="fa fa-empire"></i> : <input type="radio" name="side" value="dark" data-dojo-attach-event="onchange: _sideInputChanged" />
+  both: <input type="radio" name="side" value="" data-dojo-attach-event="onchange: _sideInputChanged" checked />
+  <br>
+  <label for="${id}-gametext">Game text:</label>
+  <input type="text" data-dojo-attach-point="gametextInput" id="${id}-gametext" />
+  <label for="${id}-lore">Lore:</label>
+  <input type="text" data-dojo-attach-point="loreInput" id="${id}-lore" />
+  <!--<label for="${id}-category">Category:</label>-->
+  <!--<select data-dojo-attach-point="categoryFilter" id="${id}-category"></select>-->
+  <label for="${id}-type">Type:</label>
+  <select data-dojo-attach-point="typeFilter" id="${id}-type"></select>
+  <label for="${id}-expansion">Expansion:</label>
+  <select data-dojo-attach-point="expansionFilter" id="${id}-expansion"></select>
+  <br>
+  <br>
+  <label>Search results:</label>
+  <div data-dojo-attach-point="resultGridNode"></div>
+</div>
