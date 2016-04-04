@@ -18,7 +18,7 @@
     "davewilton-dbootstrap": "*",
     "xstyle": "^0.3.1",
     "font-awesome": "^4.5.0",
-    "jspdf": "^1.1.135",
+    "jspdf": "1.2.61",
     "bootstrap": "^3.3.6"
   }
 }
