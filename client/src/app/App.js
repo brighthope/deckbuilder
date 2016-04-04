@@ -93,7 +93,8 @@ define([
       var headerPane = new ContentPane({
         region: 'top',
         content: header,
-        'class': 'sw-app-header'
+        'class': 'sw-app-header',
+        deckStore: this._deckStore
       });
       bc.addChild(headerPane);
 

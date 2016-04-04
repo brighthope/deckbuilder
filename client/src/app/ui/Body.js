@@ -177,11 +177,6 @@ define([
       this.deckStore.fetchSync().forEach(function(card) {
         console.debug('deck data', card);
       });
-      //var doc = new jsPDF();
-      //var text = ['eee','eezzzz','ddsds'];
-      //doc.text(20, 20, text);
-      //
-      //doc.save('Test2.pdf');
     }
 
   });
