@@ -14,7 +14,8 @@ define([
   './ui/Header',
   './ui/Body',
   './ui/Search',
-  './util/PdfUtil'
+  './util/PdfUtil',
+  './ui/widgets/SaveDeckDialog'
 ], function (
   declare,
   lang,
@@ -31,7 +32,8 @@ define([
   Header,
   Body,
   Search,
-  pdfUtil
+  pdfUtil,
+  SaveDeckDialog
 ) {
   return declare ([_WidgetBase], {
 
@@ -42,6 +44,7 @@ define([
     _typeStore: null,
     _expansionStore: null,
     _layout: null,
+    _saveDeckDialog: null,
 
     postCreate: function () {
       this.inherited(arguments);
@@ -92,7 +95,7 @@ define([
 
       /* header */
       var header = new Header();
-      on(header, 'deck.export', lang.hitch(this, this._createDecklistPdf));
+      on(header, 'deck.export', lang.hitch(this, this._showSaveDialog));
       var headerPane = new ContentPane({
         region: 'top',
         content: header,
@@ -160,8 +163,17 @@ define([
       this._layout.body.showCard(cardToShow);
     },
 
+    _showSaveDialog: function () {
+      if (!this._saveDeckDialog) {
+        this._saveDeckDialog = new SaveDeckDialog();
+      }
+      this._saveDeckDialog.show();
+    },
+
     _createDecklistPdf: function () {
       console.debug('App::_createDecklistPdf');
+
+
 
       var pdf = pdfUtil.createDeckList({
         cards: this._deckStore,

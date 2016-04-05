@@ -1,0 +1,14 @@
+<div class="dijitDialog" role="dialog" aria-labelledby="savedeck_dialog_title">
+  <div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="savedeck_dialog_title"
+          role="header" level="1"></span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon"
+          data-dojo-attach-event="ondijitclick: onCancel" title="Cancel" role="button" tabIndex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancel">x</span>
+		</span>
+  </div>
+  <div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+    <!-- Your dialog's content goes here -->
+    <label>Deck title:<input type="text"></label>
+  </div>
+</div>
