@@ -26,14 +26,7 @@ define([
 
     _exportDeckList: function () {
       console.debug('Header::_exportDeckList');
-      var doc = new jsPDF();
-      doc.text(20, 20, this.deckStore.fetchSync());
-
-      //this.deckStore.fetchSync().forEach(function(card) {
-      //  console.debug('deck data', card);
-      //});
-
-      doc.save('Test2.pdf');
+      this.emit('deck.export');
     }
 
   });

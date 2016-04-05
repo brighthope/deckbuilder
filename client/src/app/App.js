@@ -13,7 +13,8 @@ define([
   'dgrid/OnDemandGrid',
   './ui/Header',
   './ui/Body',
-  './ui/Search'
+  './ui/Search',
+  './util/PdfUtil'
 ], function (
   declare,
   lang,
@@ -29,7 +30,8 @@ define([
   OnDemandGrid,
   Header,
   Body,
-  Search
+  Search,
+  pdfUtil
 ) {
   return declare ([_WidgetBase], {
 
@@ -90,6 +92,7 @@ define([
 
       /* header */
       var header = new Header();
+      on(header, 'deck.export', lang.hitch(this, this._createDecklistPdf));
       var headerPane = new ContentPane({
         region: 'top',
         content: header,
@@ -157,8 +160,16 @@ define([
       this._layout.body.showCard(cardToShow);
     },
 
-    _createPdf: function () {
+    _createDecklistPdf: function () {
+      console.debug('App::_createDecklistPdf');
 
+      var pdf = pdfUtil.createDeckList({
+        cards: this._deckStore,
+        title: 'my decklist',
+        player: 'my name',
+        event: 'my event'
+      });
+      pdf.save('deck.pdf');
     }
 
   });
