@@ -1,5 +1,4 @@
 @import '../../../dojo/resources/dojo.css';
-@import '../../../dijit/themes/claro/claro.css';
 @import '../../../dgrid/css/dgrid.css';
 
 /*http://tympanus.net/codrops/2011/12/08/25-examples-of-perfect-color-combinations-in-web-design/*/
@@ -33,6 +32,20 @@ body {
 .sw-app-header {
     background-color: #F6F6E8;
     color: #404040;
+    height: 40px;
+}
+
+.sw-app-header .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sw-app-header .header h3 {
+    margin: 0;
+}
+
+.sw-app-header .header .links {
+    align-self:flex-end;
 }
 
 .sw-app-search {
@@ -50,9 +63,9 @@ body {
 }
 
 .body-content:after {
-  display:block;
-  content:"";
-  clear:both;
+    display:block;
+    content:"";
+    clear:both;
 }
 
 .card-panel {

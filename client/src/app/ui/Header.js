@@ -13,6 +13,7 @@ define([
 
     templateString: template,
     deckStore: null,
+    baseClass: 'header',
 
     postCreate: function () {
       this.inherited(arguments);
