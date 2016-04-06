@@ -8,7 +8,15 @@
 		</span>
   </div>
   <div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
-    <!-- Your dialog's content goes here -->
-    <label>Deck title:<input type="text"></label>
+    <div class="form-inputs">
+      <input type="text" style="width: 100%; margin-bottom: 10px" placeHolder="Deck title" data-dojo-type="dijit/form/TextBox" data-dojo-props="trim:true" data-dojo-attach-point="deckTitle" />
+      <input type="text" style="width: 100%; margin-bottom: 10px" placeHolder="Event name" data-dojo-type="dijit/form/TextBox" data-dojo-props="trim:true" data-dojo-attach-point="eventName" />
+      <input type="text" style="width: 100%; margin-bottom: 10px" placeHolder="Player name" data-dojo-type="dijit/form/TextBox" data-dojo-props="trim:true" data-dojo-attach-point="playerName" />
+    </div>
+
+    <div class="dijitDialogPaneActionBar">
+      <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-event="click: _save">Ok</button>
+      <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-event="click: _cancel">Cancel</button>
+    </div>
   </div>
 </div>

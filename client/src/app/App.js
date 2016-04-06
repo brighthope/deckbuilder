@@ -166,20 +166,22 @@ define([
     _showSaveDialog: function () {
       if (!this._saveDeckDialog) {
         this._saveDeckDialog = new SaveDeckDialog();
+        on(this._saveDeckDialog, 'save', lang.hitch(this, function(evt) {
+          console.debug('save', evt);
+          this._createDecklistPdf(evt);
+
+        }));
       }
       this._saveDeckDialog.show();
     },
 
-    _createDecklistPdf: function () {
+    _createDecklistPdf: function (info) {
       console.debug('App::_createDecklistPdf');
-
-
-
       var pdf = pdfUtil.createDeckList({
         cards: this._deckStore,
-        title: 'my decklist',
-        player: 'my name',
-        event: 'my event'
+        title: info.title,
+        player: info.player,
+        event: info.event
       });
       pdf.save('deck.pdf');
     }

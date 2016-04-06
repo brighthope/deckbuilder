@@ -8,8 +8,8 @@ define([
       var doc = new jsPDF();
 
       //doc.setFont("courier");
-      doc.setFontSize(15);
-      doc.text(20, 20, deck.title);
+      doc.setFontSize(14);
+      doc.text(20, 20, 'Deck: ' +deck.title);
       doc.text(20, 25, 'Event: ' + deck.event);
       doc.text(20, 30, 'Player: ' + deck.player);
 

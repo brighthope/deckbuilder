@@ -105,3 +105,16 @@ body {
     width: 50px;
     text-align: center;
 }
+
+.form-inputs {
+    margin: 20px 10px;
+}
+
+.save-deck-dialog {
+    width: 400px;
+    max-width: 95%;
+}
+
+.dbootstrap .save-deck-dialog .dijitDialogPaneActionBar {
+    text-align: center;
+}
