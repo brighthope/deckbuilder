@@ -63,13 +63,31 @@ define([
       }, imageList).then(function(imageArray){
         // Enjoy an array of uniformly-sized images.
         var x = 10,
-          y = 10;
+          y = 10,
+          cardNr = 1;
 
         array.forEach((imageArray), function (image) {
           var rotation = (image.width > image.height)? 90 : 0;
           doc.addImage(image, 'JPEG', x, y, cardWidth, cardHeight, image.alt, null, rotation);
-          x += cardWidth;
-          y += 0;
+
+          if (cardNr % 9 === 0) {
+            doc.addPage();
+            cardNr = 1;
+            x = 10;
+            y = 10;
+          }
+          else {
+            if (cardNr % 3 === 0) {
+              x = 10;
+              y += cardHeight;
+            }
+            else {
+              x += cardWidth;
+            }
+            cardNr += 1;
+          }
+
+
         });
 
         deferred.resolve(doc);
