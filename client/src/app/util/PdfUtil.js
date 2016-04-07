@@ -70,9 +70,8 @@ define([
           var rotation = (image.width > image.height)? 90 : 0;
           doc.addImage(image, 'JPEG', x, y, cardWidth, cardHeight, image.alt, null, rotation);
 
-          if (cardNr % 9 === 0) {
+          if (cardNr % 9 === 0 && cardNr < imageArray.length) {
             doc.addPage();
-            cardNr = 1;
             x = 10;
             y = 10;
           }
@@ -84,10 +83,8 @@ define([
             else {
               x += cardWidth;
             }
-            cardNr += 1;
           }
-
-
+          cardNr += 1;
         });
 
         deferred.resolve(doc);
