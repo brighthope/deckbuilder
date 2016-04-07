@@ -96,6 +96,7 @@ define([
       /* header */
       var header = new Header();
       on(header, 'deck.export', lang.hitch(this, this._showSaveDialog));
+      on(header, 'deck.images', lang.hitch(this, this._createImagePdf));
       var headerPane = new ContentPane({
         region: 'top',
         content: header,
@@ -184,7 +185,34 @@ define([
         event: info.event
       });
       pdf.save('deck.pdf');
+    },
+
+    _createImagePdf: function () {
+
+
+      this._getImageFromUrl('/app/resources/cards/starwars/ANewHope-Dark/large/advosze.gif', this.createPDF);
+
+    },
+
+    _getImageFromUrl: function(url, callback) {
+      //https://github.com/brandonpayton/image-load
+      var img = new Image();
+
+      img.onError = function() {
+          alert('Cannot load image: "'+url+'"');
+      };
+      img.onload = function() {
+          callback(img);
+      };
+      img.src = url;
+    },
+
+    createPDF: function (imgData) {
+			var doc = new jsPDF();
+      doc.addImage(imgData, 'JPEG', 10, 10);
+      doc.save('images.pdf')
     }
+
 
   });
 });

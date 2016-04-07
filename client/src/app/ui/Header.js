@@ -28,6 +28,11 @@ define([
     _exportDeckList: function () {
       console.debug('Header::_exportDeckList');
       this.emit('deck.export');
+    },
+
+    _exportImages: function () {
+      console.debug('Header::_exportImages');
+      this.emit('deck.images');
     }
 
   });
