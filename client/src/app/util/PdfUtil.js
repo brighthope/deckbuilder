@@ -53,7 +53,7 @@ define([
       var cardHeight = 88;
       imageLoad({
         // a src root for relative URLs. May itself be relative or absolute.
-        srcRoot: '/app/resources/cards',
+        srcRoot: 'app/resources/cards',
 
         // Attributes applied to each image when not already specified for the image
         defaultAttributes: {
