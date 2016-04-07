@@ -48,6 +48,10 @@ body {
     align-self:flex-end;
 }
 
+.sw-app-header .header .links a {
+    margin-left: 5px;
+}
+
 .sw-app-search {
     width: 400px;
     color: #F6F6E8;
