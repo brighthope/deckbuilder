@@ -34,10 +34,14 @@ define([
       var deferred = new Deferred();
       var doc = new jsPDF('portrait', 'mm', 'a4');
       var imageList = [];
+
       deck.fetchSync().forEach(function(card) {
         var copies;
         for (copies = 0; copies < card.quantity; copies++) {
-          imageList.push(card.image_path + card.image);
+          imageList.push( {
+              src: card.image_path + card.image,
+              alt: card.image_path + card.image
+          });
           if (card.image_path_back) {
             imageList.push(card.image_path + card.image_back);
           }
@@ -62,7 +66,8 @@ define([
           y = 10;
 
         array.forEach((imageArray), function (image) {
-          doc.addImage(image, 'JPEG', x, y, cardWidth, cardHeight);
+          var rotation = (image.width > image.height)? 90 : 0;
+          doc.addImage(image, 'JPEG', x, y, cardWidth, cardHeight, image.alt, null, rotation);
           x += cardWidth;
           y += 0;
         });
