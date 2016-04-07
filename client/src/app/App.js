@@ -189,7 +189,7 @@ define([
 
     _createImagePdf: function () {
       pdfUtil.createImages(this._deckStore).then(function (pdf) {
-        pdf.save('imagePdf.pdf');
+        pdf.save('deck_images.pdf');
       });
 
     }

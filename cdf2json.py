@@ -94,10 +94,15 @@ def parse_cdf_card(line, card_type, side):
         if card_text_part.startswith("Lore:"):
             card_lore = card_text_part.replace("Lore:", "").strip()
 
+    image_info = parse_image_path(line[1])
+
     card_data = {
         'side': side,
         'type': card_type,
-        'image_path': line[1],
+        'image_path': image_info['path'],
+        'image': image_info['image'],
+        'image_back': image_info['image_back'],
+        'two_sided': image_info['two_sided'],
         'legacy': 'legacy' in line[1],
         'name': card_name,
         'expansion': card_set,
@@ -126,15 +131,15 @@ def parse_cdf_card(line, card_type, side):
             'text': 'DARK: ' + card_text_dark + " | LIGHT: " + card_text_light
         })
 
-    if card_type == 'Objective':
-        print('\t -', card_text)
-        print('\t -', card_name)
-        full_path = card_data['image_path'].replace('/TWOSIDED', '')
-        card_data['image_path'] = full_path[:full_path.rfind("/")]
-        set_path = card_data['image_path'][:card_data['image_path'].rfind("/")]
-        card_data['image_path_back'] = set_path + full_path[full_path.rfind("/"):].replace('/', '/t_')
-        print('\t -', card_data['image_path'])
-        print('\t -', card_data['image_path_back'])
+    # if card_type == 'Objective':
+        # print('\t -', card_text)
+        # print('\t -', card_name)
+        # full_path = card_data['image_path'].replace('/TWOSIDED', '')
+        # card_data['image_path'] = full_path[:full_path.rfind("/")]
+        # set_path = card_data['image_path'][:card_data['image_path'].rfind("/")]
+        # card_data['image_path_back'] = set_path + full_path[full_path.rfind("/"):].replace('/', '/t_')
+        # print('\t -', card_data['image_path'])
+        # print('\t -', card_data['image_path_back'])
 
     return card_data
 
@@ -143,6 +148,28 @@ def clean_card_name(card_name):
     card_name = card_name.replace('•', '').replace('<>', '')  # remove uniqueness stuff
     k = card_name.rfind("(")  # remove destiny nr
     return card_name[:k].strip()
+
+
+def parse_image_path(full_path):
+    two_sided = False
+    if 'TWOSIDED' in full_path:
+        two_sided = True
+        full_path = full_path.replace('/TWOSIDED', '')
+        image_back = full_path[full_path.rfind("/"):].replace('/', '') + '.gif'
+        full_path = full_path[:full_path.rfind("/")]
+        image = full_path[full_path.rfind("/"):].replace('/t_', '') + '.gif'
+        image_path = full_path[:full_path.rfind("/")] + '/large/'
+    else:
+        image_path = full_path[:full_path.rfind("/")] + '/large/'
+        image = full_path[full_path.rfind("/"):].replace('/t_', '') + '.gif'
+        image_back = ''
+
+    return {
+        'two_sided': two_sided,
+        'path': image_path,
+        'image': image,
+        'image_back': image_back
+    }
 
 
 if __name__ == '__main__':

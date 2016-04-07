@@ -150,24 +150,19 @@ define([
 
 
     showCard: function (card) {
-      console.debug('_showCard', card.image_path);// /starwars/DeathStarII-Light/t_capitalsupport
+      console.debug('_showCard', card);
       domConstruct.empty(this.imageNode);
       domConstruct.empty(this.imageBackNode);
 
-      var imageSet = card.image_path.split('/')[2];
-      var imageName = card.image_path.split('/')[3];
-      imageName = imageName.substring(2);
-      console.debug('--', imageSet, imageName);
       domConstruct.create('img', {
-        src: 'app/resources/cards/starwars/' + imageSet + '/large/' + imageName + '.gif',
-        alt: imageName
+        src: 'app/resources/cards' + card.image_path + card.image,
+        alt: card.image
       }, this.imageNode);
 
-      if (card.image_path_back) {
-        var imageNameBack = card.image_path_back.split('/')[3].substring(2);
+      if (card.two_sided) {
         domConstruct.create('img', {
-          src: 'app/resources/cards/starwars/' + imageSet + '/large/' + imageNameBack + '.gif',
-          alt: imageName
+          src: 'app/resources/cards' + card.image_path + card.image_back,
+          alt: image_back
         }, this.imageBackNode);
       }
     },

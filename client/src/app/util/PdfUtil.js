@@ -30,31 +30,16 @@ define([
       return doc;
     },
 
-    _createPath: function (wrongPath) {
-      var imageSet = wrongPath.split('/')[2];
-      var imageName = wrongPath.split('/')[3];
-      imageName = imageName.substring(2);
-      return '/cards/starwars/' + imageSet + '/large/' + imageName + '.gif';
-    },
-
-    _createBackPath: function (wrongPath) {
-      var imageSet = wrongPath.split('/')[2];
-      var imageNameBack = wrongPath.split('/')[3].substring(2);
-      return '/cards/starwars/' + imageSet + '/large/' + imageNameBack + '.gif';
-    },
-
     createImages: function (deck) {
       var deferred = new Deferred();
-      //var pdf = this._getImageFromUrl('/cards/starwars/ANewHope-Dark/large/advosze.gif', this._createImagePdf);
-      // To configure the loader, pass an options hash as the first parameter.
       var doc = new jsPDF('portrait', 'mm', 'a4');
       var imageList = [];
       deck.fetchSync().forEach(function(card) {
         var copies;
         for (copies = 0; copies < card.quantity; copies++) {
-          imageList.push(this._createPath(card.image_path));
+          imageList.push(card.image_path + card.image);
           if (card.image_path_back) {
-            imageList.push(this._createBackPath(card.image_path_back));
+            imageList.push(card.image_path + card.image_back);
           }
         }
       }, this);
@@ -64,7 +49,7 @@ define([
       var cardHeight = 88;
       imageLoad({
         // a src root for relative URLs. May itself be relative or absolute.
-        srcRoot: '/app/resources',
+        srcRoot: '/app/resources/cards',
 
         // Attributes applied to each image when not already specified for the image
         defaultAttributes: {
