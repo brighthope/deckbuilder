@@ -1,7 +1,11 @@
 define([
-  'dojo/_base/array'
+  'dojo/_base/array',
+  'dojo/Deferred',
+  'image-load'
 ], function (
-  array
+  array,
+  Deferred,
+  imageLoad
 ) {
   return{
     createDeckList: function (deck) {
@@ -24,6 +28,41 @@ define([
       });
 
       return doc;
+    },
+
+    createImages: function (deck) {
+      //var pdf = this._getImageFromUrl('/cards/starwars/ANewHope-Dark/large/advosze.gif', this._createImagePdf);
+      // To configure the loader, pass an options hash as the first parameter.
+      var doc = new jsPDF();
+      var deferred = new Deferred();
+
+      imageLoad({
+        // a src root for relative URLs. May itself be relative or absolute.
+        srcRoot: '/app/resources',
+
+        // Attributes applied to each image when not already specified for the image
+        defaultAttributes: {
+          width: 24,
+          height: 24
+        }
+      },[
+        '/cards/starwars/ANewHope-Dark/large/advosze.gif',
+        '/cards/starwars/ANewHope-Dark/large/advosze.gif'
+      ]).then(function(imageArray){
+        // Enjoy an array of uniformly-sized images.
+        var x = 0,
+          y = 0;
+
+        array.forEach((imageArray), function (image) {
+          doc.addImage(image, 'JPEG', x, y);
+          x += 30;
+          y += 30;
+        });
+
+        deferred.resolve(doc);
+      });
+
+      return deferred;
     }
   };
 });

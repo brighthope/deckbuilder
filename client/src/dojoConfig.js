@@ -13,8 +13,9 @@ var dojoConfig = {
     'dgrid',
     'app',
     {
-        location: './davewilton-dbootstrap',
-        name: 'dbootstrap'
-    }
+      location: './davewilton-dbootstrap',
+      name: 'dbootstrap'
+    },
+    'image-load'
   ]
 };

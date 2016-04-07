@@ -188,31 +188,10 @@ define([
     },
 
     _createImagePdf: function () {
+      pdfUtil.createImages(this._deckStore).then(function (pdf) {
+        pdf.save('imagePdf.pdf');
+      });
 
-
-      this._getImageFromUrl('/app/resources/cards/starwars/ANewHope-Dark/large/advosze.gif', this.createPDF);
-
-    },
-
-    _getImageFromUrl: function(url, callback) {
-      //https://github.com/brandonpayton/image-load
-      var img = new Image();
-
-      img.onError = function() {
-          alert('Cannot load image: "'+url+'"');
-      };
-      img.onload = function() {
-          callback(img);
-      };
-      img.src = url;
-    },
-
-    createPDF: function (imgData) {
-			var doc = new jsPDF();
-      doc.addImage(imgData, 'JPEG', 10, 10);
-      doc.save('images.pdf')
     }
-
-
   });
 });

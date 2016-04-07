@@ -47,7 +47,13 @@ var profile = {
 		'app',
 		'dgrid',
 		'dijit',
-		'dojo'
+		'dojo',
+    'dstore',
+		'image-load',
+    {
+      location: './davewilton-dbootstrap',
+      name: 'dbootstrap'
+    }
 	],
 
 	// Strips all calls to console functions within the code. You can also set this to "warn" to strip everything

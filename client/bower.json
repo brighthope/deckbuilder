@@ -19,6 +19,7 @@
     "xstyle": "^0.3.1",
     "font-awesome": "^4.5.0",
     "jspdf": "1.2.61",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "image-load": "https://github.com/brandonpayton/image-load.git"
   }
 }
