@@ -162,7 +162,7 @@ define([
       if (card.two_sided) {
         domConstruct.create('img', {
           src: 'app/resources/cards' + card.image_path + card.image_back,
-          alt: image_back
+          alt: card.image_back
         }, this.imageBackNode);
       }
     },
