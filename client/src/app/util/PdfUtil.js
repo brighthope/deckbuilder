@@ -38,12 +38,15 @@ define([
       deck.fetchSync().forEach(function(card) {
         var copies;
         for (copies = 0; copies < card.quantity; copies++) {
-          imageList.push( {
+          imageList.push({
               src: card.image_path + card.image,
               alt: card.image_path + card.image
           });
-          if (card.image_path_back) {
-            imageList.push(card.image_path + card.image_back);
+          if (card.two_sided) {
+            imageList.push({
+              src: card.image_path + card.image_back,
+              alt: card.image_path + card.image_back
+            });
           }
         }
       }, this);
