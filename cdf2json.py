@@ -1,3 +1,4 @@
+#  -*- coding: utf-8 -*-
 # This file is part of cdf2json.
 
 import argparse
@@ -9,6 +10,8 @@ import os
 import operator
 import string
 import sys
+import chardet
+import unicodedata
 
 __doc = '''
 This is a program to convert holotable cdf files into a json file format.
@@ -38,7 +41,8 @@ def get_file_names(directory):
 def parse_cdf_files(cdf_files):
     cards = []
     for cdf in cdf_files:
-        with open(cdf, 'r', encoding='utf-8') as f:
+        # with open(cdf, 'r', encoding='utf-8') as f:
+        with codecs.open(cdf, 'r', encoding='utf-8') as f:
             print('-parsing: ', f.name)
             side = os.path.splitext(os.path.basename(f.name))[0]
             side_short = side.replace('side', '')
@@ -55,6 +59,7 @@ def parse_cdf_file(cdf_data, side):
     line_list = cdf_data.readlines()
     card_type = ''
     for line in line_list:
+        # print(line)
         stripped_line = line.strip()
         if stripped_line:
             if stripped_line.startswith("["):
