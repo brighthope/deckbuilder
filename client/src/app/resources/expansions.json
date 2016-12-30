@@ -115,6 +115,9 @@
     "expansion": "virtualset4",
     "label": "Virtual Set 4",
     "icon": "virtualset4"
+  }, {
+    "expansion": "virtualset5",
+    "label": "Virtual Set 5",
+    "icon": "virtualset5"
   }
 ]
-
