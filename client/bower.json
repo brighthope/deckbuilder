@@ -1,5 +1,5 @@
 {
-  "name": "sw client",
+  "name": "swclient",
   "version": "1.0.0",
   "ignore": [
     "**/.*",
@@ -10,10 +10,10 @@
     "tests"
   ],
   "dependencies": {
-    "dijit": "~1.10.4",
-    "dojo": "~1.10.4",
-    "util": "dojo-util#~1.10.4",
-    "dgrid": "~1.0.0",
+    "dijit": "~1.10.7",
+    "dojo": "~1.10.7",
+    "util": "dojo-util#~1.10.7",
+    "dgrid": "~1.1.0",
     "dstore": "~1.1.1",
     "davewilton-dbootstrap": "*",
     "xstyle": "^0.3.1",
