@@ -20,6 +20,10 @@
     "label": "Death Star II",
     "icon": "deathstarII"
   }, {
+    "expansion": "demodeck",
+    "label": "Demo Deck",
+    "icon": "demodeck"
+  }, {
     "expansion": "endor",
     "label": "Endor",
     "icon": "endor"
@@ -119,5 +123,9 @@
     "expansion": "virtualset5",
     "label": "Virtual Set 5",
     "icon": "virtualset5"
+  }, {
+    "expansion": "virtualset6",
+    "label": "Virtual Set 6",
+    "icon": "virtualset6"
   }
 ]

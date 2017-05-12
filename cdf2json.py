@@ -59,7 +59,7 @@ def parse_cdf_file(cdf_data, side):
     line_list = cdf_data.readlines()
     card_type = ''
     for line in line_list:
-        # print(line)
+        #print(line)
         stripped_line = line.strip()
         if stripped_line:
             if stripped_line.startswith("["):
